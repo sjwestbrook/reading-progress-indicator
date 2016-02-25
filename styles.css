@@ -3,8 +3,123 @@
 body {
   font-family: Tahoma, sans-serif;
   font-size: 1.1em;
-  line-height: 1.1em;
 }
+
+*::after, *::before {
+  box-sizing: border-box;
+}
+
+.cd-articles {
+  position: relative;
+  width: 90%;
+  max-width: 650px;
+  margin: 0 auto 3em;
+}
+
+.cd-articles article {
+  padding: 3em 0;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.cd-articles h1 {
+  margin: .6em 0 .2em;
+  line-height: 1.2;
+  font-size: 2.4rem;
+  font-family: Georgia, serif;
+}
+
+.cd-articles p {
+  padding: 1em 0;
+  line-height: 1.6;
+}
+
+header {
+  display: block;
+}
+
+.cd-read-more {
+  width: 290px;
+  background-color: #f2f2f2;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+.cd-read-more li {
+  counter-increment: articles;
+}
+
+.cd-read-more a {
+  display: block;
+  position: relative;
+  padding: 1.6em 1.1em 1.6em 4.3em;
+}
+
+a {
+  color: #2a76e8;
+  text-decoration: none;
+}
+
+.cd-read-more a::before {
+  content: counter(articles);
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  left: 1.1em;
+  width: 36px;
+  height: 36px;
+  line-height: 34px;
+  border-radius: 50%;
+  color: #b3b3b3;
+  font-family: Georgia, serif;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px #d9d9d9;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.cd-read-more a::before, .cd-read-more a::after {
+  position: absolute;
+}
+
+.cd-read-more a.reading em {
+  color: #2a76e8;
+}
+
+.cd-read-more em {
+  display: block;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.3s;
+}
+
+.cd-read-more b {
+  color: a6a6a6;
+  font-size: 1.2rem;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.cd-read-more a.reading svg {
+  display: block;
+}
+
+.cd-read-more svg {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  left: 1.1em;
+  stroke: #2a76e8;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
 
 @media only screen and (min-width: 1100px) {
   .cd-articles {
