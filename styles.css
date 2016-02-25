@@ -1,1 +1,29 @@
+// STYLES FOR READING PROGRESS INDICATOR
 
+@media only screen and (min-width: 1100px) {
+  .cd-articles {
+    position: relative;
+    width: 970px;
+    padding-right: 320px;
+  }
+}
+
+// HIDE ON MOBILE 
+.cd-read-more {
+  display: none;
+}
+
+
+@media only screen and (min-width: 1100px) {
+  .cd-read-more {
+    display: block;
+    width: 290px;
+    position: absolute;
+    top: 3em;
+    right: 0;
+  }
+  .cd-read-more.fixed {
+    position: fixed;
+    right: calc(50% - 485px);
+  }
+}
