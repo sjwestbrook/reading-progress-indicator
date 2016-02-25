@@ -1,5 +1,11 @@
 // STYLES FOR READING PROGRESS INDICATOR
 
+body {
+  font-family: Tahoma, sans-serif;
+  font-size: 1.1em;
+  line-height: 1.1em;
+}
+
 @media only screen and (min-width: 1100px) {
   .cd-articles {
     position: relative;
