@@ -96,6 +96,31 @@ a {
   transition: color 0.3s;
 }
 
+.cd-read-more b {
+  color: a6a6a6;
+  font-size: 1.2rem;
+  font-family: Georgia, serif;
+  font-style: italic;
+}
+
+.cd-read-more a.reading svg {
+  display: block;
+}
+
+.cd-read-more svg {
+  position: absolute;
+  top: 50%;
+  bottom: auto;
+  transform: translateY(-50%);
+  left: 1.1em;
+  stroke: #2a76e8;
+}
+
+img, svg {
+  max-width: 100%;
+}
+
+
 @media only screen and (min-width: 1100px) {
   .cd-articles {
     position: relative;
